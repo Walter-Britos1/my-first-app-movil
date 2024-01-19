@@ -1,10 +1,12 @@
-import { View, Text } from "react-native"
-import repositories from '../data/repositories.js'
+import { FlatList, View, Text } from "react-native";
+import repositories from "../data/repositories.js";
 
 const ReposList = () => {
   return (
-    <View>
-      {repositories.map(repo => (
+    <FlatList
+      data={repositories}
+      ItemSeparatorComponent={()=> <Text> </Text>}
+      renderItem={(({item: repo}) => (
         <View key={repo.id}>
           <Text>id: {repo.id}</Text>
           <Text>Full Name: {repo.fullName}</Text>
@@ -16,8 +18,8 @@ const ReposList = () => {
           <Text>Rating: {repo.ratingAverage}</Text>
         </View>
       ))}
-    </View>
-  )
+    ></FlatList>
+  );
 };
 
 export default ReposList;
