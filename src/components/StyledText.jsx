@@ -1,14 +1,15 @@
 import { StyleSheet, Text } from "react-native";
 import theme from '../theme';
 
-const StyledText = ({aling, children, color, fontSize, fontWeight, style, ...restOfProps}) => {
+const StyledText = ({aling, children, color, fontSize, fontWeight, style, withe, ...restOfProps}) => {
   const textStyles = [
     styles.text,
     aling === 'center' && styles.textAlingCenter,
     color === 'primary' && styles.colorPrimary,
     color === 'secundary' && styles.colorSecundary,
     fontSize === 'subHeading' && styles.subHeading,
-    fontWeight === 'bold' && styles.bold
+    fontWeight === 'bold' && styles.bold,
+    style
   ];
 
   return (
