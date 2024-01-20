@@ -1,19 +1,20 @@
 import { StyleSheet, Text } from "react-native";
-import theme from '../theme'
+import theme from '../theme';
 
-const StyledText = ({children, color, fontSize, fontWeight, style, ...restOfProps}) => {
+const StyledText = ({aling, children, color, fontSize, fontWeight, style, ...restOfProps}) => {
   const textStyles = [
     styles.text,
+    aling === 'center' && styles.textAlingCenter,
     color === 'primary' && styles.colorPrimary,
     color === 'secundary' && styles.colorSecundary,
     fontSize === 'subHeading' && styles.subHeading,
     fontWeight === 'bold' && styles.bold
-  ]
+  ];
 
   return (
     <Text style={textStyles} {...restOfProps}>{children}</Text>
   )
-}
+};
 
 const styles = StyleSheet.create({
   text: {
@@ -34,6 +35,9 @@ const styles = StyleSheet.create({
   subHeading: {
     fontSize: theme.fontSizes.subHeading
   },
+  textAlingCenter: {
+    textAling: 'center'
+  }
 });
 
 export default StyledText;
