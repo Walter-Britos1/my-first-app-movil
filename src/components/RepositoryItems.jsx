@@ -1,14 +1,12 @@
 import { View, StyleSheet } from "react-native";
-import StyledText from './StyledText';
 import RepositoryStats from "./RepositoryStats";
+import RepositoryItemsHeader from "./RepositoryItemHeader";
 import theme from "../theme";
 
 const RepositoryItems = (props) => {
   return (
     <View key={props.id} style={styles.container}>
-      <StyledText fontSize='subHeading' fontWeight='bold'>Full Name: {props.fullName}</StyledText>
-      <StyledText >Description: {props.description}</StyledText>
-      <StyledText style={styles.language}>Language: {props.language}</StyledText>
+      <RepositoryItemsHeader {...props}/>
       <RepositoryStats {...props}/>
     </View>
   );
