@@ -1,14 +1,13 @@
 import { StyleSheet, View } from "react-native";
-import StyledText from "./StyledText";
 import Constants from "expo-constants";
 import theme from "../theme";
+import AppBarTab from "./AppBarTab";
 
 const AppBar = () => {
   return (
     <View style={styles.container}>
-      <StyledText fontWeight='bold' style={styles.text}>
-        Repositories
-      </StyledText>
+      <AppBarTab active to='/'>Repositories</AppBarTab>
+      <AppBarTab active to='/signin'>Sign in</AppBarTab>
     </View>
   );
 };
@@ -16,13 +15,10 @@ const AppBar = () => {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: theme.appBar.primary,
+    flexDirection: "row",
     padding: Constants.statusBarHeight + 10,
     paddingBottom: 10,
-    paddingLeft: 10
   },
-  text: {
-    color: theme.appBar.textPrimary
-  }
 })
 
 export default AppBar;
