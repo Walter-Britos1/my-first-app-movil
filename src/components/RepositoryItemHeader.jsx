@@ -6,13 +6,13 @@ const RepositoryItemsHeader = (props) => {
   return (
     <View style={styles.container}>
       <View style={styles.imgContainer}>
-        <Image style={styles.image} source={{ url: props.ownerAvatarUrl }} />
+        <Image style={styles.image} source={{ uri: props.ownerAvatarUrl }} />
       </View>
       <View style={styles.infoContainer}>
         <StyledText fontSize="subHeading" fontWeight="bold">
           Full Name: {props.fullName}
         </StyledText>
-        <StyledText>Description: {props.description}</StyledText>
+        <StyledText color="secondary">Description: {props.description}</StyledText>
         <StyledText style={styles.language}>
           Language: {props.language}
         </StyledText>
