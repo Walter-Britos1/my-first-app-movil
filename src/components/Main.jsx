@@ -1,10 +1,11 @@
 import { View, Text } from 'react-native';
-import Constants from 'expo-constants'
 import ReposList from './ReposList';
+import AppBar from './AppBar';
 
 const Main = () => {
   return (
-    <View style={{ marginTop: Constants.statusBarHeight, flexGrow: 1 }}>
+    <View style={{ flex: 1 }}>
+      <AppBar />
       <Text>Rate repository Application</Text>
       <ReposList />
     </View>

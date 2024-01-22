@@ -15,13 +15,13 @@ const AppBar = () => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: theme.appBar.primery,
+    backgroundColor: theme.appBar.primary,
     padding: Constants.statusBarHeight + 10,
     paddingBottom: 10,
     paddingLeft: 10
   },
   text: {
-    color: theme.appBar.primaryText
+    color: theme.appBar.textPrimary
   }
 })
 
