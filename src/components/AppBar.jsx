@@ -7,11 +7,11 @@ const AppBar = () => {
   return (
     <View style={styles.container}>
       <ScrollView horizontal style={styles.scroll}>
-        <AppBarTab active to='/repositories'>Repositories</AppBarTab>
-        <AppBarTab active to='/registrer'>Register</AppBarTab>
-        <AppBarTab active to='/myprofile'>My Profile</AppBarTab>
-        <AppBarTab active to='/about'>About Us</AppBarTab>
-        <AppBarTab active to='/signin'>Sign in</AppBarTab>
+        <AppBarTab active to="/repositories">Repositories</AppBarTab>
+        <AppBarTab active to="/registrer">Register</AppBarTab>
+        <AppBarTab active to="/myprofile">My Profile</AppBarTab>
+        <AppBarTab active to="/about">About Us</AppBarTab>
+        <AppBarTab active to="/signin">Sign in</AppBarTab>
         <AppBarTab active to="/">Exit</AppBarTab>
       </ScrollView>
     </View>
