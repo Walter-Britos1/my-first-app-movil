@@ -23,5 +23,6 @@ const styles = StyleSheet.create({
   scroll: {
     paddingBottom: 15,
   }
+})
 
 export default AppBar;
