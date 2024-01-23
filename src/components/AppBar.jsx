@@ -8,9 +8,10 @@ const AppBar = () => {
     <View style={styles.container}>
       <ScrollView>
         <AppBarTab active to='/'>Repositories</AppBarTab>
-        <AppBarTab active to='/signin'>My Profile</AppBarTab>
-        <AppBarTab active to='/signin'>About</AppBarTab>
+        <AppBarTab active to='/myprofile'>My Profile</AppBarTab>
+        <AppBarTab active to='/about'>About</AppBarTab>
         <AppBarTab active to='/signin'>Sign in</AppBarTab>
+        <AppBarTab active to="/">Exit</AppBarTab>
       </ScrollView>
     </View>
   );
