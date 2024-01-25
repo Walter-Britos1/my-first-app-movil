@@ -22,10 +22,10 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: theme.appBar.primary,
     flexDirection: "row",
-    padding: Constants.statusBarHeight + 10,
+    padding: Constants.statusBarHeight + 5,
   },
   scroll: {
-    paddingBottom: 15,
+    paddingBottom: -5,
   }
 });
 
