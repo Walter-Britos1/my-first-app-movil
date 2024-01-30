@@ -1,8 +1,9 @@
 import { View, Text } from "react-native";
-import { Route, Routes, useLocation } from "react-router-native";
+import { Routes, Route, useLocation } from "react-router-native";
 import ReposList from "./ReposList";
 import AppBar from "./AppBar";
-import Landing from "./Landing";
+import Landing from "../pages/Landing";
+import Login from "../pages/Login"
 
 const Main = () => {
   const { pathname } = useLocation();
@@ -13,10 +14,8 @@ const Main = () => {
       <Routes>
         <Route exact path="/" element={<Landing />} />
         <Route exact path="/repositories" element={<ReposList />} />
-        <Route exact path="/registrer" element={<Text>Registrer</Text>} />
-        <Route exact path="/myprofile" element={<Text>My Profile</Text>} />
+        <Route exact path="/signin" element={<Login />} />
         <Route exact path="/about" element={<Text>About Us</Text>} />
-        <Route exact path="/signin" element={<Text>Working in it</Text>} />
       </Routes>
     </View>
   );
