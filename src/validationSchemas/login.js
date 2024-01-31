@@ -3,7 +3,7 @@ import * as yup from "yup";
 export const loginValidateSchema = yup.object().shape({
   userName: yup
       .string()
-      .required()
+      .required("User Name is required")
       .min(5, "User Name too short!")
       .max(13, "User Name too long!"),
 
@@ -15,5 +15,6 @@ export const loginValidateSchema = yup.object().shape({
   password: yup
       .string()
       .min(5, "Password too short!")
-      .max(13, "Password too long!"),
+      .max(13, "Password too long!")
+      .required("Password is required")
 });
