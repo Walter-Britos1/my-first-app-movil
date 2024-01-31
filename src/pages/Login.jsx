@@ -1,5 +1,6 @@
 import { Button, StyleSheet, View } from "react-native";
 import { Formik } from "formik";
+import { loginValidateSchema } from "../validationSchemas/login";
 import FormikInputValues from "../components/FormikInputValues";
 
 const initialValues = {
@@ -12,8 +13,9 @@ const Login = () => {
     <Formik
       initialValues={initialValues}
       onSubmit={(values) => console.log(values)}
+      validationSchema={loginValidateSchema}
     >
-      {({ handleChange, handleSubmit, values }) => {
+      {({ handleSubmit }) => {
         return (
           <View style={styles.form}>
             <FormikInputValues
