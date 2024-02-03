@@ -1,23 +1,25 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from "react"
 
-const useRepositorieList = () => {
+const useRepositories = () => {
   const [repositories, setRepositories] = useState(null);
- 
-  const repositoriesFetch = async () => {
-    const response = await fetch("http://localhost:5000/api/repositories");
+
+  const fetchRepositories = async () => {
+    const response = await fetch("http://192.168.0.2:5000/api/repositories");
+
     const json = await response.json();
-    setRepositories(json)
+    
+    setRepositories(json);
   };
-  
+
   useEffect(() => {
-    repositoriesFetch()
+    fetchRepositories()
   }, []);
 
-  const repositoriesList = repositories
-  ? repositories.edges.map(edge => edge.node)
-  : [];
+  const repositoriesNode = repositories
+    ? repositories.edges.map(edge => edge.node)
+    : []
 
-  return { loading, repositories: repositoriesList, refetch };
+  return { repositoriesList: repositoriesNode }
 };
 
-export default useRepositorieList;
+export default useRepositories;
