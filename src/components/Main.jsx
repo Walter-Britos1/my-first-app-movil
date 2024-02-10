@@ -4,6 +4,7 @@ import ReposList from "./ReposList";
 import AppBar from "./AppBar";
 import Landing from "../pages/Landing";
 import Login from "../pages/Login"
+import About from "../pages/About";
 
 const Main = () => {
   const { pathname } = useLocation();
@@ -15,7 +16,7 @@ const Main = () => {
         <Route exact path="/" element={<Landing />} />
         <Route exact path="/repositories" element={<ReposList />} />
         <Route exact path="/signin" element={<Login />} />
-        <Route exact path="/about" element={<Text>About Us</Text>} />
+        <Route exact path="/about" element={<About />} />
       </Routes>
     </View>
   );
